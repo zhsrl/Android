@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Vkontakte-RecyclerView</string>
+    <string name="menu">menu</string>
+    <string name="mmenu">Menu</string>
+    <string name="news">News</string>
+    <string name="message">message</string>
+    <string name="groups">groups</string>
+    <string name="profile">profile</string>
+</resources>
