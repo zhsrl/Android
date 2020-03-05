@@ -13,12 +13,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigation;
     RecyclerView recView;
     ArrayList<FeedModel>feedModelArrayList=new ArrayList<>();
     RecyclerViewAdapterFeed adapterFeed;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
