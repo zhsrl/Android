@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.vkontakte_recyclerview.RecyclerViewAdapterFeed;
 import com.example.vkontakte_recyclerview.FeedModel;
@@ -14,12 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     BottomNavigationView bottomNavigation;
     RecyclerView recView;
     ArrayList<FeedModel>feedModelArrayList=new ArrayList<>();
     RecyclerViewAdapterFeed adapterFeed;
+    private TypeFaceUtil TypefaceUtil;
 
 
     @Override
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottomNavigation = findViewById(R.id.bottom_navigation);
+        TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "fonts/MontserratSemiBold.ttf");
 
         populaterecyclerview();
 
@@ -37,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
         adapterFeed = new RecyclerViewAdapterFeed(this,feedModelArrayList);
         recView.setAdapter(adapterFeed);
 
+
     }
+
 
     private void populaterecyclerview() {
         FeedModel fm1 = new FeedModel("Motivation Portal | Мотивация" , "два часа назад" , "" ,"16" , R.drawable.profile1 , R.drawable.post2 ,"3" , "14", "4");

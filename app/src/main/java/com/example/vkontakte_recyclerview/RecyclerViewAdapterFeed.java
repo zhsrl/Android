@@ -59,6 +59,7 @@ public class RecyclerViewAdapterFeed extends RecyclerView.Adapter<RecyclerViewAd
 
         glide.load(mData.get(position).getUploaderpic()).into(holder.uploader);
         glide.load(mData.get(position).getPostpic()).into(holder.post);
+
     }
 
     @Override
@@ -72,12 +73,13 @@ public class RecyclerViewAdapterFeed extends RecyclerView.Adapter<RecyclerViewAd
         CircleImageView uploader;
         ImageView post;
 
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             uploadername = itemView.findViewById(R.id.user_name);
             posttime = itemView.findViewById(R.id.post_time);
             likes = itemView.findViewById(R.id.cnt_like);
-            postText = itemView.findViewById(R.id.post_text);
+            postText = itemView.findViewById(   R.id.post_text);
             comments = itemView.findViewById(R.id.cnt_comment);
             shares = itemView.findViewById(R.id.cnt_shares);
             views = itemView.findViewById(R.id.cnt_view);

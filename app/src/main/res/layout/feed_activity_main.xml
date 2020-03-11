@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#fff"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#428df5" />
+
+            <TextView
+                android:id="@+id/appBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Запись на стене"
+                android:textSize="27sp"
+                android:textColor="#000"
+                />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/button_more"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:tint="#428df5"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/profile1"/>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="370dp"
+        android:layout_height="0.5dp"
+        android:background="#b0b0b0"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="56dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="#ff"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/clip"
+            android:tint="#b0b0b0"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:textSize="15sp"
+            android:hint="Комментарий"
+            android:fontFamily="sans-serif-medium"
+            />
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_smile_outline_28"
+            android:tint="#b0b0b0"
+            android:layout_marginLeft="320dp"
+            />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_send_28"
+            android:tint="#b0b0b0"
+            android:layout_marginLeft="370dp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

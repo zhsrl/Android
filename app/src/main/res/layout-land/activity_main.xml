@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            app:itemHorizontalTranslationEnabled="false"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             app:itemIconSize="28dp"
