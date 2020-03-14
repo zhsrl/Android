@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -24,10 +25,14 @@ public class MainActivity extends AppCompatActivity{
     private TypeFaceUtil TypefaceUtil;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         bottomNavigation = findViewById(R.id.bottom_navigation);
         TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "fonts/MontserratSemiBold.ttf");
 

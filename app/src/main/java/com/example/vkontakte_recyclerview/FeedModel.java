@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import androidx.annotation.RequiresApi;
 import android.os.Build;
 
-public class FeedModel{
+public class FeedModel implements Parcelable{
     private String Name;
     private String Time;
     private String postText;
@@ -44,6 +44,42 @@ public class FeedModel{
         this.views = in.readString();
 
 
+    }
+
+    public static final Creator<FeedModel> CREATOR = new Creator<FeedModel>() {
+        @RequiresApi(api = Build.VERSION_CODES.Q)
+        @Override
+        public FeedModel createFromParcel(Parcel in) {
+            return new FeedModel(in);
+        }
+
+        @Override
+        public FeedModel[] newArray(int size) {
+            return new FeedModel[size];
+        }
+    };
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("News{");
+        sb.append("author='").append(Name).append('\'');
+        sb.append(", time='").append(Time).append('\'');
+        sb.append(", posttext='").append(postText).append('\'');
+        sb.append(", likes='").append(likes).append("\'");
+        sb.append(", uploaderpic='").append(uploaderpic).append("\'");
+        sb.append(", postpoc='").append(postpic).append("\'");
+        sb.append(", comments='").append(comments).append("\'");
+        sb.append(", shares='").append(shares).append("\'");
+        sb.append(", views='").append(views).append("\'");
+        sb.append('}');
+
+        return sb.toString();
+
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.Q)

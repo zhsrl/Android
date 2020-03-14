@@ -106,7 +106,7 @@
             android:layout_marginBottom="5dp">
 
 
-            <Button
+            <ImageView
                 android:id="@+id/like"
 
                 android:layout_width="18dp"
